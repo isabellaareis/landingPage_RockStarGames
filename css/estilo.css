@@ -1,0 +1,487 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: rgb(28, 27, 27);
+}
+
+.header {
+    margin-top: 70px; /* Remover o espaço adicional */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    height: calc(100vh - 70px); /* Ajusta a altura para não sobrepor a navbar fixa */
+    min-height: 400px;
+    max-height: 800px;
+    min-width: 300px;
+    color: #eee;
+    background-image: url('images/banner.png'); /* URL da imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o espaço */
+    background-position: center; /* Centraliza a imagem */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    background-color: #000;
+    padding: 10px 20px;
+    width: 100%;
+    height: 100px; /* Altura fixa da navbar */
+    position: fixed; /* Mantém a navbar fixa no topo */
+    top: 0; /* Fica no topo da página */
+    left: 0; /* Começa na borda esquerda da tela */
+    z-index: 1; /* Garante que a navbar fique acima de outros elementos */
+
+}
+
+.logo {
+    height: 135px;
+    margin-left: 100px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 60px; /* Diminui o espaçamento entre os links */
+}
+
+.navbar-nav {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+    
+}
+
+.nav-link {
+    margin-left: 50px;
+    color: white !important; /* Altera a cor dos links da navbar */
+}
+
+.nav-link:hover {
+    color: #ccc; /* Altera a cor ao passar o mouse sobre o link */
+}
+
+.botao {
+    background-color: rgb(252, 175, 23);
+    border: 10px solid black; /* Largura da borda */
+    border-radius: 18px; /* Cantos arredondados */
+    color: black;
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor do mouse */
+    transition: background-color 0.3s; /* Transição ao passar o mouse */
+    width: 200px;
+}
+.botao:hover {
+    background-color: rgb(220, 150, 20); /* Cor um pouco mais escura */
+    transform: scale(1.05); /* Aumenta o botão em 5% */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao botão */
+}
+
+.botaoP {
+    border-radius: 100%; /* Botão circular */
+    background-color: #403e3e; /* Cor de fundo */
+    width: 50px; /* Largura */
+    height: 50px; /* Altura */
+    border: transparent; /* Sem borda */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+/* Animação ao passar o cursor */
+.botaoP:hover {
+    background-color: #5a5454; /* Cor mais clara ao passar o mouse */
+    transform: scale(1.2); /* Aumenta o botão em 20% */
+}
+.collapse{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.botaoU {
+    border-radius: 100%; /* Botão circular */
+    background-color: #403e3e; /* Cor de fundo */
+    width: 50px; /* Largura */
+    height: 50px; /* Altura */
+    border: transparent; /* Sem borda */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+/* Animação ao passar o cursor */
+.botaoU:hover {
+    background-color: #5a5454; /* Cor mais clara ao passar o mouse */
+    transform: scale(1.2); /* Aumenta o botão em 20% */
+}
+
+#navbarSupportedContent{
+    margin-left: -250px;
+}
+
+.botoes{
+    margin-right: -250px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    background-color: rgb(18, 17, 17);
+    padding: 100px 130px;   
+}
+
+#jogoDestaque{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#jogoDestaque .jogoDestaque-titulo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: #fff;
+}
+
+.plataformas button {
+    border: transparent;
+    border-radius: 80px;
+    color: #fff;
+    height: 40px;
+    background-color: #403e3e;
+    padding: 5px 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+/* Animação ao passar o cursor */
+.plataformas button:hover {
+    background-color: #5a5454; /* Cor mais clara ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o botão em 10% */
+}
+
+.plataformas {
+    display: flex;
+    gap: 20px; /* Aumenta o espaçamento entre os botões */
+    align-items: center;
+}
+
+#jogoDestaque .jogoDestaque-titulo h1 {
+    width: max-content;
+    font-weight: bold;
+    font-size: 50px;
+}
+#imagens {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    height: 345px;
+    gap: 50px;
+    justify-content: space-around;
+}
+
+#imagens img {
+    max-height: 100%;
+    width: auto;
+    border-radius: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Adiciona uma transição suave */
+    cursor: pointer;
+    user-drag: none; /* Evita o arrasto da imagem em navegadores que suportam */
+    -webkit-user-drag: none; /* Para navegadores baseados em WebKit, como Safari */
+   
+}
+
+/* Animação ao passar o cursor */
+#imagens img:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% */
+    opacity: 0.8; /* Reduz a opacidade para 80% */
+}
+
+.botao-ver {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.botao-ver button {
+    background-color: rgb(252, 175, 23);
+    border: transparent;
+    border-radius: 8px; /* Cantos arredondados */
+    color: black;
+    padding: 10px 20px; /* Espaçamento interno */
+    height: 70px;
+    width: 280px;
+    font-weight: 500;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+/* Animação ao passar o cursor */
+.botao-ver button:hover {
+    background-color: rgb(220, 150, 20); /* Cor um pouco mais escura */
+    transform: scale(1.05); /* Aumenta o botão em 5% */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao botão */
+}
+
+#noticias{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#noticias .ultimasNoticias-titulo {
+    display: flex;
+    flex-direction: column; /* Alinha o título e o card em coluna */
+    align-items: flex-start; /* Alinha o título à esquerda */
+    width: 100%;
+    color: #fff;
+    margin-bottom: 20px; /* Espaço abaixo do título para o card */
+}
+
+#noticias .ultimasNoticias-titulo h1 {
+    width: max-content;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+/* Contêiner principal para alinhar o card grande à esquerda e os cards pequenos à direita */
+.mainContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top:40px;
+}
+
+/* Card maior à esquerda */
+.cardTrailer {
+    width: 800px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição de animação */
+}
+
+.cardTrailer img {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px 20px 0 0;
+}
+
+.cardText {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(10, 10, 10);
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 20px 20px;
+}
+
+.cardText p {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Contêiner para os cards menores à direita */
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Estilização dos cards menores */
+.cardGta, .cardBully {
+    width: 380px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 250px;
+    margin-left: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardGta img, .cardBully img {
+    width: 100%;
+    height: 190px;
+    border-radius: 20px 20px 0 0;
+}
+
+/* Caixinha de texto para os cards menores */
+.cardTextSmall {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(10, 10, 10);
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 20px 20px;
+}
+
+.cardTextSmall p {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Efeito de hover com animação para todos os cards */
+.cardGta:hover, .cardBully:hover, .cardTrailer:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do card em 5% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao redor do card */
+}
+
+@keyframes clickPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Aumenta o tamanho */
+    }
+    100% {
+        transform: scale(1); /* Retorna ao tamanho original */
+    }
+}
+
+/* Estilos do banner */
+.launcherBanner {
+    margin-top: 150px;
+    height: 500px;
+    width: 1200px;
+    border-radius: 20px;
+    transition: transform 0.2s ease;
+}
+
+.launcherBanner:active {
+    animation: clickPulse 0.3s ease; /* Duração da animação ao clicar */
+}
+/* Estilos e animações do botão */
+.bannerLauncher button {
+    position: absolute;
+    z-index: 1;
+    top: 80%;
+    left: 15%;
+    width: 150px;
+    height: 60px;
+    border: 0;
+    background-color: rgb(252, 175, 23);
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    animation: pulse 1.5s ease-in-out infinite; /* Animação contínua de pulso */
+    transition: background-color 0.3s; /* Transição suave na cor ao passar o mouse */
+}
+
+
+
+
+/* Estilos do banner */
+.launcherBanner {
+    margin-top: 150px;
+    height: 500px;
+    width: 1200px;
+    border-radius: 20px;
+    transition: transform 0.3s ease; /* Suavidade ao passar o cursor */
+}
+
+/* Animação de aumento de tamanho ao passar o cursor */
+.launcherBanner:hover {
+    transform: scale(1.05); /* Aumenta levemente o tamanho do banner */
+}
+
+/* Estilos do botão */
+.bannerLauncher button {
+    position: absolute;
+    z-index: 1;
+    top: 80%;
+    left: 15%;
+    width: 150px;
+    height: 60px;
+    border: 0;
+    background-color: rgb(252, 175, 23);
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s; /* Suavidade ao aumentar e mudar a cor */
+}
+
+/* Animação de aumento de tamanho ao passar o cursor */
+.bannerLauncher button:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão em 10% */
+    background-color: rgb(252, 200, 50); /* Opcional: muda a cor ao passar o cursor */
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column; /* Alinha a logo, os links sociais e o texto de copyright em coluna */
+    align-items: flex-start;
+}
+
+.logoFooter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Espaço entre a logo e os links sociais */
+}
+
+.logoFooter img {
+    margin-right: 20px;
+    height: 140px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os links sociais */
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.social-links a:hover {
+    color: #ddd;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+    text-align: left; /* Alinha o texto de copyright à esquerda */
+}
+
+#icons {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os ícones */
+}
+
+#icons a {
+    color: #fff; /* Cor dos ícones */
+}
